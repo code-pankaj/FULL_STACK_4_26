@@ -4,12 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Portal</title>
+
+    <style>
+        /* Reset & base styles */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* Page container */
+        body > * {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #1e88e5;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Navigation */
+        p a {
+            text-decoration: none;
+            color: #1e88e5;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+
+        h2 {
+            color: #1e88e5;
+            margin-bottom: 15px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1e88e5;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Forms */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1e88e5;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Spacing tweaks */
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Job Portal</h1>
 
-    <p>
+    <p style="text-align:center;">
         <a href="#jobs">View Jobs</a> |
         <a href="#post">Post a Job</a> |
         <a href="#apply">Apply for Job</a> |
@@ -20,7 +151,7 @@
 
     <h2 id="jobs">Available Jobs</h2>
 
-    <table border="1" cellpadding="5">
+    <table>
         <tr>
             <th>Job ID</th>
             <th>Title</th>
@@ -78,7 +209,7 @@
 
         <p>
             Job Description:<br>
-            <textarea rows="4" cols="40"></textarea>
+            <textarea rows="4"></textarea>
         </p>
 
         <input type="submit" value="Post Job">
@@ -136,9 +267,9 @@
         <input type="submit" value="Register">
     </form>
 
-    <hr>
-
-    <p>&copy; 2026 Simple Job Portal</p>
+    <footer>
+        &copy; 2026 Job Portal
+    </footer>
 
 </body>
 </html>

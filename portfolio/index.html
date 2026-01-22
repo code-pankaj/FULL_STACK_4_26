@@ -1,119 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <style>
+    body {
+      background-color: #f5f5f5;
+      color: #222;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    header img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #555;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .projects {
+      text-align: center;
+    }
+
+    .project-card {
+      display: inline-block;
+      width: 45%;
+      background-color: #f2f2f2;
+      margin: 10px;
+      padding: 10px;
+      vertical-align: top;
+      border: 1px solid #ddd;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .project-card a {
+      font-size: 14px;
+      margin-right: 10px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    ul {
+      color: #444;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    input, select, textarea {
+      width: 300px;
+      padding: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 6px 12px;
+      background-color: #ddd;
+      border: 1px solid #aaa;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
     <header>
-        <img src="./my_pfp.jpeg" alt="pfp" width="70">
-        <h1>Pankaj Yadav</h1>
-        <p>Web2 | Web3 Developer</p>
+      <img src="./my_pfp.jpeg" alt="pfp" width="80">
+      <h1>Pankaj Yadav</h1>
+      <p>Web2 | Web3 Developer</p>
     </header>
-    <hr>
+
     <nav>
-        <a target="_blank" href="https://www.leetcode.com/codepankaj">Leetcode</a>
-        <a target="_blank" href="https://www.codepankaj.tech">Website</a>
-        <a target="_blank" href="https://www.github.com/code-pankaj">GitHub</a>
-        <a target="_blank" href="https://www.x.com/codepankajpy">X/Twitter</a>
-        <a target="_blank" href="https://www.linkedin.com/in/codepankaj">LinkedIn</a>
+      <a href="#">Leetcode</a>
+      <a href="#">Website</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
     </nav>
-    <hr>
-    <section class="projects">
-        <h2>Projects</h2>
-        <article>
-            <div>
-                <img src="./solfrag.png" alt="solfrag-img" width="300">
-            </div>
-            <h3>SolFrag</h3>
-            <p>SolFrag is a fast-paced multiplayer shooter built for quick, skill-based combat.</p>
-            <a href="https://github.com/code-pankaj/SolFrag">GitHub</a>
-            <a href="https://solfrag.codepankaj.tech/">View</a>
-        </article>
-        <article>
-            <div>
-                <img src="./aniscout.png" alt="aniscout-img" width="300">
-            </div>
-            <h3>AniScout</h3>
-            <p>A minimal anime suggestion web app that randomly recommends an anime to help users discover something new.</p>
-            <a href="https://github.com/code-pankaj/AniScout">GitHub</a>
-            <a href="https://aniscout.codepankaj.tech/">View</a>
-        </article>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <div class="project-card">
+          <img src="./aniscout.png" alt="AniScout">
+          <h3>AniScout</h3>
+          <p>Minimal anime suggestion web app.</p>
+          <a href="#">GitHub</a>
+          <a href="#">View</a>
+        </div>
+
+        <div class="project-card">
+          <img src="./solfrag.png" alt="SolFrag">
+          <h3>SolFrag</h3>
+          <p>Fast-paced multiplayer shooter.</p>
+          <a href="#">GitHub</a>
+          <a href="#">View</a>
+        </div>
+      </div>
     </section>
-    <hr>
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Typescript</li>
-            <li>React</li>
-            <li>MongoDB</li>
-            <li>TailwindCSS</li>
-            <li>Rust</li>
-            <li>Bash</li>
-            <li>C++</li>
-            <li>Prisma</li>
-            <li>Git</li>
-            <li>Linux</li>
-        </ul>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Typescript</li>
+        <li>React</li>
+        <li>MongoDB</li>
+        <li>Rust</li>
+        <li>Git & Linux</li>
+      </ul>
     </section>
-    <hr>
-    <section class="education">
-        <table border="2">
-            <caption>
-                Education
-            </caption>
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Specialization</th>
-                    <th>Passing Year</th>
-                    <th>Institute</th>
-                    <th>Grades</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>BTech</td>
-                    <td>CSE</td>
-                    <td>2028</td>
-                    <td>Chandigarh University</td>
-                    <td>6.67</td>
-                </tr>
-            </tbody>
-        </table>
+
+    <section>
+      <h2>Education</h2>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Institute</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>BTech CSE</td>
+          <td>Chandigarh University</td>
+          <td>2028</td>
+        </tr>
+      </table>
     </section>
-    <hr>
-    <section class="contact-form">
-        <h2>Contact Me</h2>
-        <form action="" id="form">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="username" id="name" placeholder="Your name" required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="hello@yourmail.com" required>
-            </div>
-            <div>
-                <label for="subject">Subject</label>
-                <select name="subject" id="subject">
-                    <option value="option">Choose an Option</option>
-                    <option value="job">Job Opportunity</option>
-                    <option value="work">Freelance Work</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
-            </div>
-            <button>Submit</button>
-        </form>
+
+    <section>
+      <h2>Contact</h2>
+      <form>
+        <p><input type="text" placeholder="Your name"></p>
+        <p><input type="email" placeholder="Your email"></p>
+        <p><textarea rows="4" placeholder="Your message"></textarea></p>
+        <button>Submit</button>
+      </form>
     </section>
-    <hr>
+
     <footer>
-        &copy; All Rights Reserved | 2026
+      © 2026 Pankaj Yadav
     </footer>
-  </body>
+
+  </div>
+
+</body>
 </html>
