@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <meta name="description" content="A clean and interactive to-do app with filters and persistence.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header class="top">
+            <div class="brand">
+                <div>
+                    <h1>To-Do</h1>
+                    <p class="subtitle">Plan your day. Finish faster.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="card" aria-label="Add a task">
+            <form id="taskForm" class="task-form" autocomplete="off">
+                <label class="sr-only" for="taskInput">Task</label>
+                <input id="taskInput" type="text" placeholder="Add a task…" maxlength="120" />
+                <button id="addTask" type="submit" class="btn btn-primary">Add</button>
+            </form>
+
+            <div class="toolbar" aria-label="Filters and actions">
+                <div class="filters" role="tablist" aria-label="Task filter">
+                    <button class="chip is-active" type="button" data-filter="all">All</button>
+                    <button class="chip" type="button" data-filter="active">Active</button>
+                    <button class="chip" type="button" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="search">
+                    <label class="sr-only" for="searchInput">Search</label>
+                    <input id="searchInput" type="search" placeholder="Search…" />
+                </div>
+
+                <div class="actions">
+                    <button id="clearCompleted" class="btn btn-ghost" type="button">Clear completed</button>
+                </div>
+            </div>
+
+            <div class="stats" aria-live="polite">
+                <span id="itemsLeft">0 items left</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span id="itemsTotal">0 total</span>
+            </div>
+
+            <ul class="listTask" id="listTask" aria-label="Task list"></ul>
+
+            <div class="empty" id="emptyState">
+                <div class="empty-title">No tasks yet</div>
+                <div class="empty-sub">Add something small and get started.</div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
